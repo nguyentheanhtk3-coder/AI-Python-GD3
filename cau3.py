@@ -1,15 +1,16 @@
 A = [5, 3, 8, 3, 9, 1, 5, 7, 8, 2, 9, 4]
 B = [6, 3, 2, 9, 5, 7, 5, 12, 8, 15, 7, 4]
-
-D = set(A) & set(B)
+#Chung A va B
+D = set(A) & set(B) #tim cac phan tu xuat hien o ca 2 danh sach A va B
 D = list(D)
 
 cungvitri = []
 for i in range(len(A)):
     if A[i] == B[i]:
         cungvitri.append((i, A[i]))
+#danh sach C gom cac phan tu khong trung nhau trong A
 C = []
-soptu = {}
+soptu = {} #tim cac gia tri xuat hien bao nhieu lan trong A
 lon_nhat = 0
 lon_nhi = 0
 for i in A:

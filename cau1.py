@@ -5,19 +5,19 @@ bt = 8
 kt = 7.5
 thi = 6.0
 t = 7385 + x
-
+#Tinh gioi gian lam bai
 def tg(i):
-    giay = i % 60
-    i = i // 60
-    phut = i % 60
-    i = i // 60
+    giay = i % 60 #So giay du
+    i = i // 60  #So phut lam bai
+    phut = i % 60 #So phut du
+    i = i // 60 #So gio lam bai
     gio = i
     print(f"Thoi gian: {gio} gio {phut} phut {giay} giay")
-
+#Tinh diem hoc phan
 def diem_hp(x, y, z, t):
     diem = 0.1 * x + 0.1 * y + 0.2 * z + 0.6 * t
     return diem
-
+#Xep loai hoc phan
 def xep_loai(x):
     if x >= 8.0:
         print("Xep loai: Gioi")
@@ -27,10 +27,10 @@ def xep_loai(x):
         print("Xep loai: Trung binh")
     else:
         print("Xep loai: Yeu")
-
+#Tinh diem thi toi thieu de dat 8.0
 def diem_thi_toi_thieu_de_dat_8(x, y, z):
     diem = (8.0 - x * 0.1 - y * 0.1 - z * 0.2) / 0.6
-    round(diem, 2)
+    diem = round(diem, 2) #lam tron 2 chu so thap phan
     return diem
 
 dhp = diem_hp(cc, bt, kt, thi)

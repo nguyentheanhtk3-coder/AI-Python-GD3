@@ -103,11 +103,13 @@ print("")
 
 print("Trung ma sach: ", end="")
 ds_code = code(sach)
-if any(x > 1 for x in ds_code.values()):
-    print("YES -> ", end="")
-
 code_trung = []
-for x in ds_code:
-    if ds_code[x] > 1:
-        code_trung.append(x)
-print(code_trung)
+if any(x > 1 for x in ds_code.values()): 
+    #bat ky dk thoan man xay ra trong vong lap gia tri cua ds_code
+    print("YES -> ", end="")
+    for x in ds_code:
+        if ds_code[x] > 1:
+            code_trung.append(x)
+    print(code_trung)
+else:
+    print("NO")
